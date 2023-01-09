@@ -1,0 +1,10 @@
+Vous sautez sur le côté au moment où le sortilège se
+déclenche. L'énergie magique vient exploser à l'endroit
+où vous vous trouviez l'instant précédent. Vous courrez
+pour mettre un peu de distance entre le magicien et vous.
+Vous avisez une dague posée sur un bureau plus loin
+et une grosse armoire derrière laquelle vous pourriez
+vous cacher.
+
+D - Aller ramasser la dague
+A - Vous cacher derrière l'armoire 

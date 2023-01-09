@@ -1,0 +1,14 @@
+Vous vous accroupissez derrière la plus grande armoire
+du laboratoire. Malgré l'épaisseur du bois, le sort
+du magicien vous secoue quand il s'écrase contre
+le meuble massif. Vous l'entendez s'approcher derrière
+l'armoire en psalmodiant. Il prépare un nouveau sort!
+Paniqué, vous regardez autour de vous. Vous yeux sont
+attirée par l'éclat d'une dague serties de pierres
+précieuses, posée parmi un tas de bijoux. Vous reperez
+aussi la porte de sortie du laboratoire. Enfin, une
+idée germe dans votre tête.  
+
+D - Aller ramasser la dague
+F - Foncer vers la sortie 
+P - Pousser l'armoire sur le magicien

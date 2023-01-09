@@ -1,0 +1,55 @@
+#include <math.h>
+#include "Joueur.h"
+
+Joueur::Joueur(float xP, float yP, CoteEcran entree, CoteEcran sortie) :
+  Vaisseau { "images/vaisseau.png", 0,
+              entree, sortie,
+              xP, yP, -1 }
+{
+
+}
+
+void Joueur::load() {
+  Sprite::load();
+  vies = Constantes::VAISSEAU_VIES;
+  visible = true;
+  x = Constantes::VAISSEAU_DEPART_X;
+  y = Constantes::VAISSEAU_DEPART_Y;
+  vx = 0;
+  vy = 0;
+}
+
+void Joueur::updatePhasePrincipale(float dt) {
+  // Contrôles
+  if(IsKeyDown(KEY_D)) {
+    vx += Constantes::VAISSEAU_ACCELERATION;
+  }
+  else if(IsKeyDown(KEY_A)) {
+    vx -= Constantes::VAISSEAU_ACCELERATION;
+  }
+  if(IsKeyDown(KEY_S)) {
+    vy += Constantes::VAISSEAU_ACCELERATION;
+  }
+  else if(IsKeyDown(KEY_W)) {
+    vy -= Constantes::VAISSEAU_ACCELERATION;
+  }
+  vx *= Constantes::VAISSEAU_DECELERATON;
+  vy *= Constantes::VAISSEAU_DECELERATON;
+
+  // Rester à l'ecran
+  Rectangle rect = getRectangle();
+  if (rect.x < 0) {
+    x = rect.width / 2;
+  }
+  else if (rect.x + rect.width > Constantes::ECRAN_LARGEUR) {
+    x = Constantes::ECRAN_LARGEUR - rect.width / 2;
+  }
+  if (rect.y < 0) {
+    y = rect.height / 2;
+  }
+  else if (rect.y + rect.height > Constantes::ECRAN_HAUTEUR) {
+    y = Constantes::ECRAN_HAUTEUR - rect.height / 2;
+  }
+
+  Vaisseau::updatePhasePrincipale(dt);
+}

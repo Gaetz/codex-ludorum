@@ -1,0 +1,46 @@
+#ifndef VAISSEAU_H
+#define VAISSEAU_H
+
+#include "Sprite.h"
+#include <string>
+#include "Constantes.h"
+#include "Tir.h"
+#include "Phase.h"
+#include "CoteEcran.h"
+
+using namespace std;
+
+class Vaisseau : public Sprite {
+public:
+  Vaisseau(string cheminTextureP, float rotationP,
+           CoteEcran coteEcranEntreeP, CoteEcran coteEcranSortieP,
+           float xCibleP, float yCibleP, float dureePhasePrincipaleP);
+  void update(float dt);
+  Tir tirer(float rotation = 0.0f, bool ennemi = false);
+  bool degats(int nbDegats);
+  bool horsJeu();
+
+  float vx { 0.0f };
+  float vy { 0.0f };
+  int vies { 1 };
+  Phase phase { Phase::Entree };
+
+private:
+  void executerDeplacement(float dt);
+  void deplacementVersCible(float dt);
+
+protected:
+  void updatePhaseEntree(float dt);
+  virtual void updatePhasePrincipale(float dt);
+  void updatePhaseSortie(float dt);
+  void changerPhase(Phase nouvellePhase);
+
+  CoteEcran coteEcranEntree { CoteEcran::Droite };
+  CoteEcran coteEcranSortie { CoteEcran::Gauche };
+  float xCible { 0.0f };
+  float yCible { 0.0f };
+  float dureePhasePrincipale { 0.0f };
+  float compteurPhasePrincipale { 0.0f };
+};
+
+#endif

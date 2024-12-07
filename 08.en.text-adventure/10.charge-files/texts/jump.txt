@@ -1,0 +1,8 @@
+You jump to the side just as the spell is cast. The
+magical energy explodes where you were just a moment ago.
+You run to put some distance between you and the wizard.
+You notice a dagger lying on a desk further away
+and a large wardrobe behind which you could hide.
+
+D - Go pick up the dagger
+W - Hide behind the wardrobe

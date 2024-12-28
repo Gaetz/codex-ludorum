@@ -1,11 +1,11 @@
-struct Aventurier {
-  int force;
+struct Adventurer {
+  int strength;
   int dext;
   int intel;
-  int charisme;
+  int charisma;
 };
 
 int main() {
-  Aventurier hannor { 17, 12, 12, 8 };
-  Aventurier ombreciel { 7, 12, 16, 15 }; 
+  Adventurer hannor { 17, 12, 12, 8 };
+  Adventurer ombreciel { 7, 12, 16, 15 };
 }
